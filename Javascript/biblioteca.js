@@ -19,7 +19,6 @@ class libro{
     }
 }
 
-
 class bibilioteca{
     constructor(){
         this.libros = []
