@@ -20,21 +20,24 @@ function ciudades(){
 }
 function crear_matriz_ciudades(numero){ //lista.length
     let matriz = []
-    matriz.push(lista)
+    let primeraFila = [""].concat(lista)
+    matriz.push(primeraFila)
 
-    for(let i = 0; i < numero + 1; i++){
+    for(let i = 0; i < numero; i++){
         let fila = []
         for(let j = 0; j < numero + 1; j++){
             fila.push("C")
         }
         matriz.push(fila)
+        matriz[i+1][0] = lista[i]
     }
     console.log(matriz)
     console.log(matriz.map(fila => fila.join(' ')).join('\n'))
-
+    return matriz
 }
 
 function interfaz(lista){
-    crear_matriz_ciudades(lista.length)
+    let matriz = crear_matriz_ciudades(lista.length)
+
 }
 ciudades()
