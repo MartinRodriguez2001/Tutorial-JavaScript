@@ -40,6 +40,7 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
+
 function agregadorDePersonas(){
     rl.question("Ingrese el nombre de la persona: ", (nombre) => {
         rl.question("Ingrese la edad de la persona: ", (edad) => {
